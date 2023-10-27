@@ -1,0 +1,11 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/2022-12-13-pandas-number-formatting.html",
+      "/posts/2022-08-01-tidying-dataframe-column-names.html",
+      "/posts/2022-01-30-calculating-a-forward-looking-moving-average-in-pandas.html",
+      "/posts/2021-08-23-recreate-visualization-in-matplotlib.html"
+    ]
+  }
+]
