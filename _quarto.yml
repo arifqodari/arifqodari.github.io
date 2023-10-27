@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Arif Qodari"
+  google-analytics: "G-SP1GGVPXSX"
   navbar:
     right:
       - about.qmd
