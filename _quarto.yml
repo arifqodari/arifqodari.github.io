@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Arif Qodari"
+  title: "Arif Qodari | Tech Notes"
   google-analytics: "G-SP1GGVPXSX"
   navbar:
     right:
