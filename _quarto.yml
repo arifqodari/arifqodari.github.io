@@ -3,6 +3,8 @@ project:
 
 website:
   title: "Arif Qodari | Tech Notes"
+  site-url: https://arifqodari.github.io
+  description: "Data Science and Artificial Intelligence"
   google-analytics: "G-SP1GGVPXSX"
   navbar:
     right:
