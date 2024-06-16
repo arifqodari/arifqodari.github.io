@@ -1,0 +1,69 @@
+---
+title: "Talks"
+# image: profile.jpg
+talk:
+  template: jolla
+
+---
+
+## Recommender System
+**Algoritma Talks ft Tiket.com – 2023**
+
+{{< video https://youtu.be/wQNuUXYKTFw >}}
+
+
+## Seldon to Speed up Machine Learning Model Deployment
+Presented in: **Ruangguru IO Tech Talks – 2022**
+
+{{< video https://youtu.be/OjTMSTRWQZ4?t=523 >}}
+
+
+## How we Save TV Ads Cost using Rating Prediction Algorithm
+Presented in: **Ruangguru IO Tech Talks – 2021**
+
+{{< video https://youtu.be/tQNwRN4Dw-M?t=4088 >}}
+
+
+## Python Type Hinting: Why It Should be Your Best Friend
+Presented in: **PyCon Indonesia Lightning Talks – 2020**
+
+{{< video https://youtu.be/OiOyNXXG4oU?t=735 >}}
+
+
+## Probabilistic Programming with Python
+Presented in: **Kopdar Python-ID Yogyakarta. Universitas Jenderal Achmad Yani Yogyakarta – 2020**
+
+[News](https://unjaya.ac.id/informatika-unjani-yogyakarta-menjadi-tuan-rumah-kopdar-python-id/) – [Slide](https://docs.google.com/presentation/d/1-J7l6IrrVRdf5Jq5mBL5MGiR2cxHlSXm9NCrVMrvFgI/edit?usp=sharing)
+
+
+## Software Engineering and Artificial Intelligence
+Presented in: **Seminar Nasional "Implementation Artificial Intelligence in The Industrial 4.0 Era". Universitas Stikubank Semarang – 2019**
+
+[Slide](https://docs.google.com/presentation/d/1A0UZZ-OVJsvB0N0UfeAREWqrMQET6DckU22Twi7kzr8/edit?usp=sharing)
+
+## Roboguru: How Machine Learning Helps Students Learning
+Presented in: **Ruangguru Tech Talks – 2019**
+
+
+## Applied Machine Learning for Organization
+Presented in: **Google BizFest x DevFest Yogyakarta – 2018**
+
+[Slide](https://docs.google.com/presentation/d/1TC2kgqTARkPsHE-MhLQlEQkZT0TNVs1VtI3pxy-Cu0Y/edit?usp=sharing)
+
+
+## Mini Workshop in Image Search with Python
+Presented in: **Machine Learning Indonesia Community Talks. Yogyakarta – 2018**
+
+[Slide](https://docs.google.com/presentation/d/1lboid3eCjX5PBELfwd3TMepQ8upoYyScFdEM21fYPg0/edit?usp=sharing)
+
+
+## Trends in Artificial Intelligence
+Presented in: **Universitas Ahmad Dahlan. Yogyakarta – 2017**
+
+[Slide](https://docs.google.com/presentation/d/1Es1NwP82eM6v5pQD3gdWS0C9CJHZ3ZsKoz1HQo4HpJ4/edit?usp=sharing)
+
+
+## Workshop in Machine Learning and Data Mining Batch 1 - 7
+Presented in: **Universitas Ahmad Dahlan. Yogyakarta – 2017 - 2018**
+
+With more than 200 total number of students joined.
