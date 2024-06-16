@@ -16,6 +16,7 @@ about:
 
 ---
 
-I am 7+ years experienced data scientist with background in computer science and artificial intelligence. My work typically ranges but not limited to solving business problems using data, data analysis, and develop machine learning model for production systems that giving impact to millions of users.
+I am a senior data scientist with over 8 years of experience, holding a strong background in computer science and artificial intelligence. My expertise encompasses solving business challenges through data and machine learning. I have experience in production-ready data pipelines, both streaming and batch, and deploying machine learning models in scalable manner.
 
-I have experience working remotely with international team, managing data science projects, mentoring, and collaborating with non-technical stakeholders.
+Throughout my career, I have collaborated with international teams across various companies, thriving in remote-first working environments.
+I believe asynchronous and written communication is key factors to be success in remote working environment.
