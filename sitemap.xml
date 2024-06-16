@@ -2,26 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://arifqodari.github.io/about.html</loc>
-    <lastmod>2023-11-07T15:22:14.328Z</lastmod>
+    <lastmod>2024-06-16T02:02:47.535Z</lastmod>
   </url>
   <url>
-    <loc>https://arifqodari.github.io/posts/2021-08-23-recreate-visualization-in-matplotlib.html</loc>
-    <lastmod>2023-11-07T15:22:13.703Z</lastmod>
-  </url>
-  <url>
-    <loc>https://arifqodari.github.io/posts/2022-12-13-pandas-number-formatting.html</loc>
-    <lastmod>2023-11-07T15:22:12.652Z</lastmod>
-  </url>
-  <url>
-    <loc>https://arifqodari.github.io/posts/2022-01-30-calculating-a-forward-looking-moving-average-in-pandas.html</loc>
-    <lastmod>2023-11-07T15:22:12.288Z</lastmod>
+    <loc>https://arifqodari.github.io/talk.html</loc>
+    <lastmod>2024-06-16T02:02:46.890Z</lastmod>
   </url>
   <url>
     <loc>https://arifqodari.github.io/posts/2022-08-01-tidying-dataframe-column-names.html</loc>
-    <lastmod>2023-11-07T15:22:13.007Z</lastmod>
+    <lastmod>2024-06-16T02:02:45.897Z</lastmod>
+  </url>
+  <url>
+    <loc>https://arifqodari.github.io/posts/2022-01-30-calculating-a-forward-looking-moving-average-in-pandas.html</loc>
+    <lastmod>2024-06-16T02:02:45.170Z</lastmod>
+  </url>
+  <url>
+    <loc>https://arifqodari.github.io/posts/2022-12-13-pandas-number-formatting.html</loc>
+    <lastmod>2024-06-16T02:02:45.538Z</lastmod>
+  </url>
+  <url>
+    <loc>https://arifqodari.github.io/posts/2021-08-23-recreate-visualization-in-matplotlib.html</loc>
+    <lastmod>2024-06-16T02:02:46.588Z</lastmod>
   </url>
   <url>
     <loc>https://arifqodari.github.io/index.html</loc>
-    <lastmod>2023-11-07T15:22:14.075Z</lastmod>
+    <lastmod>2024-06-16T02:02:47.268Z</lastmod>
   </url>
 </urlset>

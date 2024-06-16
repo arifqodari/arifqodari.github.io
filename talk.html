@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Arif Qodari">
-<meta name="dcterms.date" content="2022-08-01">
-<meta name="description" content="A simple script to tidying up messing column names in pandas dataframe">
 
-<title>Arif Qodari | Tech Notes - Tidying Dataframe Column Names</title>
+<title>Arif Qodari | Tech Notes - Talks</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,59 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -105,12 +68,9 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-SP1GGVPXSX', { 'anonymize_ip': true});
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -120,7 +80,7 @@ gtag('config', 'G-SP1GGVPXSX', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Arif Qodari | Tech Notes</span>
     </a>
   </div>
@@ -131,11 +91,11 @@ gtag('config', 'G-SP1GGVPXSX', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about.html" rel="" target="">
+    <a class="nav-link" href="./about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../talk.html" rel="" target="">
+    <a class="nav-link active" href="./talk.html" rel="" target="" aria-current="page">
  <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item compact">
@@ -161,171 +121,86 @@ gtag('config', 'G-SP1GGVPXSX', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Tidying Dataframe Column Names</h1>
-                  <div>
-        <div class="description">
-          A simple script to tidying up messing column names in pandas dataframe
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">pandas</div>
-                <div class="quarto-category">TIL</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Arif Qodari </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">August 1, 2022</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-
-
-
-<p>Let’s use this sample data.</p>
-<div class="cell" data-execution_count="3">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"https://gist.githubusercontent.com/arifqodari/965b854469b279df026e305864a944c0/raw/43984c8596373d64e602717ed6c3313393c85b2e/flight_dummy.csv"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">flightNumber</th>
-<th data-quarto-table-cell-role="th">Airline Name</th>
-<th data-quarto-table-cell-role="th">departure date_time</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>QZ-274</td>
-<td>AirAsia Indonesia</td>
-<td>2023-11-22 20:30</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>QG-526</td>
-<td>Citilink</td>
-<td>2023-11-22 16:20</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>QG-522</td>
-<td>Citilink</td>
-<td>2023-11-22 06:00</td>
-</tr>
-</tbody>
-</table>
-
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Talks</h1>
 </div>
-</div>
-</div>
-<p>Next, let’s define our method <code>tidy_columns</code> containing series of functions to tidy up the column names. Then apply the function to the dataframe above.</p>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> camel_to_snake(str_):</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    str_ <span class="op">=</span> re.sub(<span class="st">"(.)([A-Z][a-z]+)"</span>, <span class="vs">r"\1 \2"</span>, str_)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> re.sub(<span class="st">"([a-z0-9])([A-Z])"</span>, <span class="vs">r"\1 \2"</span>, str_).lower()</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> whitespace_to_underscore(str_):</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> re.sub(<span class="st">"\s+"</span>, <span class="st">"_"</span>, str_)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tidy_columns(df):</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    df.columns <span class="op">=</span> (</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        df.columns</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        .<span class="bu">str</span>.strip()  <span class="co"># strip text</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        .<span class="bu">map</span>(camel_to_snake)  <span class="co"># change to snake case</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        .<span class="bu">map</span>(whitespace_to_underscore)  <span class="co"># change any whitespace to underscore</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        .<span class="bu">str</span>.lower()  <span class="co"># lowercase</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        .<span class="bu">str</span>.replace(<span class="st">"("</span>, <span class="st">""</span>)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        .<span class="bu">str</span>.replace(<span class="st">")"</span>, <span class="st">""</span>)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>tidy_df <span class="op">=</span> tidy_columns(df)</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>tidy_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">flight_number</th>
-<th data-quarto-table-cell-role="th">airline_name</th>
-<th data-quarto-table-cell-role="th">departure_date_time</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>QZ-274</td>
-<td>AirAsia Indonesia</td>
-<td>2023-11-22 20:30</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>QG-526</td>
-<td>Citilink</td>
-<td>2023-11-22 16:20</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>QG-522</td>
-<td>Citilink</td>
-<td>2023-11-22 06:00</td>
-</tr>
-</tbody>
-</table>
 
-</div>
-</div>
-</div>
-<p>Neat! The simple method above <code>tidy_columns</code> do the following:</p>
-<ul>
-<li>strip trailing whitespace</li>
-<li>change from camel case to snake case (if any)</li>
-<li>replace any whitespace (e.g.&nbsp;space) to underscore</li>
-<li>change case to lowercase</li>
-<li>remove parentheses</li>
-</ul>
-<p><strong>If you think that it needs additional treatment, you can simply create another function that accept a string and return a string and put another <code>.map(your_function)</code> in the tidy function above.</strong></p>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="recommender-system" class="level2">
+<h2 class="anchored" data-anchor-id="recommender-system">Recommender System</h2>
+<p><strong>Algoritma Talks ft Tiket.com – 2023</strong></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/wQNuUXYKTFw" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="seldon-to-speed-up-machine-learning-model-deployment" class="level2">
+<h2 class="anchored" data-anchor-id="seldon-to-speed-up-machine-learning-model-deployment">Seldon to Speed up Machine Learning Model Deployment</h2>
+<p>Presented in: <strong>Ruangguru IO Tech Talks – 2022</strong></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/OjTMSTRWQZ4?t=523" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="how-we-save-tv-ads-cost-using-rating-prediction-algorithm" class="level2">
+<h2 class="anchored" data-anchor-id="how-we-save-tv-ads-cost-using-rating-prediction-algorithm">How we Save TV Ads Cost using Rating Prediction Algorithm</h2>
+<p>Presented in: <strong>Ruangguru IO Tech Talks – 2021</strong></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/tQNwRN4Dw-M?t=4088" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="python-type-hinting-why-it-should-be-your-best-friend" class="level2">
+<h2 class="anchored" data-anchor-id="python-type-hinting-why-it-should-be-your-best-friend">Python Type Hinting: Why It Should be Your Best Friend</h2>
+<p>Presented in: <strong>PyCon Indonesia Lightning Talks – 2020</strong></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/OiOyNXXG4oU?t=735" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="probabilistic-programming-with-python" class="level2">
+<h2 class="anchored" data-anchor-id="probabilistic-programming-with-python">Probabilistic Programming with Python</h2>
+<p>Presented in: <strong>Kopdar Python-ID Yogyakarta. Universitas Jenderal Achmad Yani Yogyakarta – 2020</strong></p>
+<p><a href="https://unjaya.ac.id/informatika-unjani-yogyakarta-menjadi-tuan-rumah-kopdar-python-id/">News</a> – <a href="https://docs.google.com/presentation/d/1-J7l6IrrVRdf5Jq5mBL5MGiR2cxHlSXm9NCrVMrvFgI/edit?usp=sharing">Slide</a></p>
+</section>
+<section id="software-engineering-and-artificial-intelligence" class="level2">
+<h2 class="anchored" data-anchor-id="software-engineering-and-artificial-intelligence">Software Engineering and Artificial Intelligence</h2>
+<p>Presented in: <strong>Seminar Nasional “Implementation Artificial Intelligence in The Industrial 4.0 Era”. Universitas Stikubank Semarang – 2019</strong></p>
+<p><a href="https://docs.google.com/presentation/d/1A0UZZ-OVJsvB0N0UfeAREWqrMQET6DckU22Twi7kzr8/edit?usp=sharing">Slide</a></p>
+</section>
+<section id="roboguru-how-machine-learning-helps-students-learning" class="level2">
+<h2 class="anchored" data-anchor-id="roboguru-how-machine-learning-helps-students-learning">Roboguru: How Machine Learning Helps Students Learning</h2>
+<p>Presented in: <strong>Ruangguru Tech Talks – 2019</strong></p>
+</section>
+<section id="applied-machine-learning-for-organization" class="level2">
+<h2 class="anchored" data-anchor-id="applied-machine-learning-for-organization">Applied Machine Learning for Organization</h2>
+<p>Presented in: <strong>Google BizFest x DevFest Yogyakarta – 2018</strong></p>
+<p><a href="https://docs.google.com/presentation/d/1TC2kgqTARkPsHE-MhLQlEQkZT0TNVs1VtI3pxy-Cu0Y/edit?usp=sharing">Slide</a></p>
+</section>
+<section id="mini-workshop-in-image-search-with-python" class="level2">
+<h2 class="anchored" data-anchor-id="mini-workshop-in-image-search-with-python">Mini Workshop in Image Search with Python</h2>
+<p>Presented in: <strong>Machine Learning Indonesia Community Talks. Yogyakarta – 2018</strong></p>
+<p><a href="https://docs.google.com/presentation/d/1lboid3eCjX5PBELfwd3TMepQ8upoYyScFdEM21fYPg0/edit?usp=sharing">Slide</a></p>
+</section>
+<section id="trends-in-artificial-intelligence" class="level2">
+<h2 class="anchored" data-anchor-id="trends-in-artificial-intelligence">Trends in Artificial Intelligence</h2>
+<p>Presented in: <strong>Universitas Ahmad Dahlan. Yogyakarta – 2017</strong></p>
+<p><a href="https://docs.google.com/presentation/d/1Es1NwP82eM6v5pQD3gdWS0C9CJHZ3ZsKoz1HQo4HpJ4/edit?usp=sharing">Slide</a></p>
+</section>
+<section id="workshop-in-machine-learning-and-data-mining-batch-1---7" class="level2">
+<h2 class="anchored" data-anchor-id="workshop-in-machine-learning-and-data-mining-batch-1---7">Workshop in Machine Learning and Data Mining Batch 1 - 7</h2>
+<p>Presented in: <strong>Universitas Ahmad Dahlan. Yogyakarta – 2017 - 2018</strong></p>
+<p>With more than 200 total number of students joined.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
